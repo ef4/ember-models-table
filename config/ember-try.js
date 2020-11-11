@@ -7,6 +7,7 @@ if (pr) {
 }
 
 const getChannelURL = require('ember-source-channel-url');
+const { embroiderSafe } = require('@embroider/test-setup');
 
 module.exports = async function() {
   return {
@@ -158,7 +159,8 @@ module.exports = async function() {
         env: {
           EMT_UI: 'plain-html'
         }
-      }
+      },
+      embroiderSafe(),
     ]
   };
 };
