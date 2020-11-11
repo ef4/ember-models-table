@@ -41,6 +41,7 @@ jobs:
     name: Compatibility
     runs-on: ubuntu-latest
     strategy:
+      fail-fast: false
       matrix:
         scenario:
           - ember-lts-3.4
